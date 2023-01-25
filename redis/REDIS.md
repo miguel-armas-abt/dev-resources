@@ -17,3 +17,8 @@ keys *
 ```shell script
 flushall
 ```
+
+> Obtener por llave : 
+```shell script
+HGETALL persona:01
+```
