@@ -16,3 +16,8 @@
 > Spring doesn't allow autowired in enums:
 <https://stackoverflow.com/questions/55316832/how-to-inject-a-dependency-in-a-java-enum>
 
+> Transient, annotation of JPA: 
+<https://stackoverflow.com/questions/2154622/why-does-jpa-have-a-transient-annotation>
+
+> StepVerifier for unit tests of Reactor
+<https://www.baeldung.com/reactive-streams-step-verifier-test-publisher>

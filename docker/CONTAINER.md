@@ -2,8 +2,10 @@
 > - Los comandos que requieran el ID del contenedor reconocen el contenedor a partir de los 3 primeros dígitos.
 
 > Construir nuevo contenedor:
+> - El flag --rm indica que se eliminará el contenedor cuando se detenga
+> - El flag -d indica que se ejecutará el contenedor en segundo plano
 ```shell script
-docker run -p <local-port>:<internal-port> --name <container-name> --network <network-name> <image-name>
+docker run --rm -p <local-port>:<internal-port> --name <container-name> --network <network-name> <image-name>
 ```
 
 > Eliminar contenedor:

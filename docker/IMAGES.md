@@ -1,7 +1,8 @@
 ## Imágenes
 > Construir imagen:
 >
-> Ejemplo: `$ docker build -t config-server:v1`
+> Ejemplo: `$ docker build -t config-server:v1 .`
+> - El punto (.) indica el directorio donde se ubica el .jar
 ```shell script
 docker build -t <image-name>:<tag>
 ```
