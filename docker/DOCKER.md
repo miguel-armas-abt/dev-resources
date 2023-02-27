@@ -11,8 +11,3 @@
 ```shell script
 docker --version
 ```
-
-
-
-
-

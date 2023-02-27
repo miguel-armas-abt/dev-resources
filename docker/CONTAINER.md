@@ -1,26 +1,37 @@
 ## Contenedores
-> - Los comandos que requieran el ID del contenedor reconocen el contenedor a partir de los 3 primeros dígitos.
-
 > Construir nuevo contenedor:
 > - El flag --rm indica que se eliminará el contenedor cuando se detenga
 > - El flag -d indica que se ejecutará el contenedor en segundo plano
+>
+> Ejemplo: `$ docker run --rm -p 8093:8093 --name my-container my-image:0.0.1`
 ```shell script
-docker run --rm -p <local-port>:<internal-port> --name <container-name> --network <network-name> <image-name>
+docker run --rm -p <local-port>:<internal-port> --name <container-name> --network <network-name> <image-name:tag>
 ```
 
 > Eliminar contenedor:
 ```shell script
-docker rm <container-id>
+docker rm <container-id || container-name>
+```
+
+> Eliminar todos los contenedores detenidos:
+> - El flag `--all` indica la eliminación de imágenes, contenedores, volúmenes y redes que no estén siendo utilizadas 
+```shell script
+docker system prune --all
 ```
 
 > Iniciar un contenedor previamente detenido:
 ```shell script
-docker start <container-id>
+docker start <container-id || container-name>
 ```
 
 > Detener un contenedor previamente iniciado:
 ```shell script
-docker stop <container-id>
+docker stop <container-id || container-name>
+```
+
+> Detener todos los contenedores:
+```shell script
+docker stop $(docker ps -a -q)
 ```
 
 > Listar los contenedores activos:
@@ -36,11 +47,6 @@ docker ps
 docker ps -a
 ```
 
-> Eliminar los contenedores detenidos y los volúmenes y redes no usados:
-```shell script
-docker system prune
-```
-
 > Ver lista de comandos para contenedores:
 ```shell script
 docker container --help
@@ -48,5 +54,10 @@ docker container --help
 
 > Ver logs:
 ```shell script
-docker logs -f <container-name>
+docker logs -f <container-id || container-name>
+```
+
+> Ver métricas de consumo:
+```shell script
+docker stats
 ```
