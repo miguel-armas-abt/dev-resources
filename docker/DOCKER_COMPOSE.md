@@ -34,11 +34,18 @@ docker-compose start
 docker-compose stop 
 ```
 
-> Ejecutar solo un contenedor de los definidos en la orquestación:
+> Ejecutar solo un servicio de los definidos en la orquestación:
 >
-> Ejemplo: `docker-compose -f docker-compose.yml up -d keycloak-server`
+> Ejemplo: `docker-compose up -d keycloak-server`
 ```shell script
-docker-compose -f docker-compose.yml up -d <component-name>
+docker-compose -f <yml-file> up -d <service-name>
+```
+
+> Escalar un servicio al iniciar la orquestación:
+>
+> Ejemplo: `docker-compose up --scale  billingapp-front=3 -d --force-recreate`
+```shell script
+docker-compose -f <yml-file> up --scale  <service-name>=<N> -d --force-recreate
 ```
 
 > Al usar Docker Compose debemos considerar la compatibilidad entre Docker Engine, Docker Compose y Docker YML file.

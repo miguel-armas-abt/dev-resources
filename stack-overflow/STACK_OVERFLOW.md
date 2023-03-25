@@ -21,3 +21,12 @@
 
 > StepVerifier for unit tests of Reactor
 <https://www.baeldung.com/reactive-streams-step-verifier-test-publisher>
+
+> Swtich context Kubernetes if you use Docker Desktop
+<https://stackoverflow.com/questions/50490808/unable-to-connect-to-the-server-dial-tcp-18080-connectex-no-connection-c>
+
+> Open kubernetes dashboard in Windows 10
+https://www.youtube.com/watch?v=vBMryTczFMI
+
+>GNU32 for Windows. Add path to environment variables /bin
+https://gnuwin32.sourceforge.net/install.html

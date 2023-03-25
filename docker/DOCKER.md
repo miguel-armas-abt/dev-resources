@@ -11,3 +11,8 @@
 ```shell script
 docker --version
 ```
+
+> Acceder a un contenedor en modo bash: 
+```shell script
+docker exec -it <container-name> /bin/bash
+```
