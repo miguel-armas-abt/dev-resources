@@ -11,8 +11,8 @@ Un "service" representa un conjunto de configuraciones que definen cómo ejecuta
 
 ### Flags
 Algunos de los flags más recurrentes al ejecutar comandos de Docker Compose:
-> - `-f docker-compose-custom.yml` permite ejecutar un archivo .yml diferente a docker-compose.yml
-> - `-d` activa la ejecución en segundo plano
+- `-f docker-compose-custom.yml` permite ejecutar un archivo .yml diferente a docker-compose.yml
+- `-d` activa la ejecución en segundo plano
 
 ### Iniciar los servicios definidos en la orquestación:
 - `--force-recreate` fuerza la recreación de los servicios
@@ -21,6 +21,7 @@ Algunos de los flags más recurrentes al ejecutar comandos de Docker Compose:
 ```shell script
 docker-compose up
 ```
+> Ejemplo: `docker-compose -f docker-compose-custom.yml up -d`
 > Ejemplo: `docker-compose up --scale  billingapp-front=3 -d --force-recreate`
 
 ### Iniciar los servicios que aún no han iniciado:
