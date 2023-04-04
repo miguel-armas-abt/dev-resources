@@ -17,12 +17,13 @@ Algunos de los flags más recurrentes al ejecutar comandos de Docker Compose:
 ### Iniciar los servicios definidos en la orquestación:
 - `--force-recreate` fuerza la recreación de los servicios
 - Para iniciar un servicio específico podemos agregar su nombre al final del comando
-- `--scale <service-name>=<replicas-number>` escala un servicio con una cantidad de réplicas
+- `--scale <service-name>=<replicas-number>` escala un servicio específico con una cantidad de réplicas
 ```shell script
 docker-compose up
 ```
-> Ejemplo: `docker-compose -f docker-compose-custom.yml up -d`
-> Ejemplo: `docker-compose up --scale  billingapp-front=3 -d --force-recreate`
+Ejemplos: 
+- `docker-compose -f docker-compose-custom.yml up -d`
+- `docker-compose up --scale  billingapp=3 -d --force-recreate`
 
 ### Iniciar los servicios que aún no han iniciado:
 ```shell script

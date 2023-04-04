@@ -12,7 +12,8 @@ Algunos de los flags más recurrentes al ejecutar comandos de imágenes:
 ```shell script
 docker build -t <image-name:tag> .
 ```
-> Ejemplo: `$ docker build -t config-server:0.0.1-SNAPSHOT .`
+Ejemplo:
+- `$ docker build -t config-server:0.0.1-SNAPSHOT .`
 
 ### Mostrar imágenes: 
 ```shell script

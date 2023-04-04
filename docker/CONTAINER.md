@@ -13,7 +13,8 @@ Algunos de los flags más recurrentes al ejecutar comandos de contenedores:
 ```shell script
 docker run --rm -p <local-port>:<internal-port> --name <container-name> --network <network-name> <image-name:tag>
 ```
-> Ejemplo: `$ docker run --rm -p 8093:8093 --name my-container my-image:0.0.1`
+Ejemplos:
+- `$ docker run --rm -p 8093:8093 --name my-container my-image:0.0.1`
 
 ### Mostrar logs:
 ```shell script
