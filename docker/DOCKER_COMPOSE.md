@@ -1,53 +1,56 @@
-> Versión de docker-compose:
-```shell script
-docker-compose --version
-```
-```shell script
-docker compose version
-```
+# DOCKER COMPOSE
 
-> Hacer pull a las imágenes requeridas en la orquestación:
-```shell script
-docker-compose pull
-```
+## Compatibilidad
+Docker Compose requiere ser compatible con el Docker Engine y Docker YML file.
+<https://docs.docker.com/compose/compose-file/compose-versioning/>
 
-> Construir las imágenes definidas en la orquestación:
-```shell script
-docker-compose build
-```
+## Service
+Un "service" representa un conjunto de configuraciones que definen cómo ejecutar uno o más contenedores de Docker.
 
-> Inicializar los contenedores de los servicios de la orquestación:
-> - El flag `-f` <yml-file> permite ejecutar un archivo diferente a docker-compose.yml
-> - El flag `-d` activa la ejeución en segundo plano
-> - El flag `--force-recreate` fuerza la inicialización de los contenedores
-```shell script
-docker-compose -f <yml-file> up -d --force-recreate
-```
+## Comandos
 
-> Iniciar los contenedores de la orquestación que aún no han iniciado:
+### Flags
+Algunos de los flags más recurrentes al ejecutar comandos de Docker Compose:
+> - `-f docker-compose-custom.yml` permite ejecutar un archivo .yml diferente a docker-compose.yml
+> - `-d` activa la ejecución en segundo plano
+
+### Iniciar los servicios definidos en la orquestación:
+- `--force-recreate` fuerza la recreación de los servicios
+- Para iniciar un servicio específico podemos agregar su nombre al final del comando
+- `--scale <service-name>=<replicas-number>` escala un servicio con una cantidad de réplicas
+```shell script
+docker-compose up
+```
+> Ejemplo: `docker-compose up --scale  billingapp-front=3 -d --force-recreate`
+
+### Iniciar los servicios que aún no han iniciado:
 ```shell script
 docker-compose start
 ```
 
-> Detener todos los contenedores de la orquestación:
+### Eliminar los servicios definidos en la orquestación:
+```shell script
+docker-compose down
+```
+
+### Detener todos los servicios de la orquestación:
 ```shell script
 docker-compose stop 
 ```
 
-> Ejecutar solo un servicio de los definidos en la orquestación:
->
-> Ejemplo: `docker-compose up -d keycloak-server`
+### Pull a las imágenes requeridas en la orquestación:
 ```shell script
-docker-compose -f <yml-file> up -d <service-name>
+docker-compose pull
 ```
 
-> Escalar un servicio al iniciar la orquestación:
->
-> Ejemplo: `docker-compose up --scale  billingapp-front=3 -d --force-recreate`
+### Construir las imágenes definidas en la orquestación:
 ```shell script
-docker-compose -f <yml-file> up --scale  <service-name>=<N> -d --force-recreate
+docker-compose build
 ```
 
-> Al usar Docker Compose debemos considerar la compatibilidad entre Docker Engine, Docker Compose y Docker YML file.
-> `https://docs.docker.com/compose/compose-file/compose-versioning/`
+### Obtener versión:
+```shell script
+docker-compose --version
+docker compose version
+```
 

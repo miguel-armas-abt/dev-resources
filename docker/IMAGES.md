@@ -1,37 +1,30 @@
-## Imágenes
-> Construir imagen:
-> - El punto (.) indica el directorio donde nos ubicamos
-> - El flag --no-cache indica que no se utilizará cache de construcciones anteriores
->
-> Ejemplo: `$ docker build -t config-server:v1 .`
->
-> Ejemplo: `$ docker build -t billingapp:prod --no-cache --build-arg JAR_FILE=target/*.jar .`
+# Imágenes
 
+### Flags
+Algunos de los flags más recurrentes al ejecutar comandos de imágenes:
+- `--all` es equivalente a `-a` y significa "todas las imágenes almacenadas en el sistema"
+- `--force` es equivalente a `-f` y significa "forzar la ejecución"
+- `-q` muestra solamente los ID's
+- `-t` indica que se definirá un tag
+
+### Construir imagen:
+- `.` indica el directorio actual
 ```shell script
 docker build -t <image-name:tag> .
 ```
-```shell script
-docker build -t <image-name:tag> --no-cache --build-arg <ARG-NAME>=<arg-value> .
-```
+> Ejemplo: `$ docker build -t config-server:0.0.1-SNAPSHOT .`
 
-> Listar imágenes: 
+### Mostrar imágenes: 
 ```shell script
 docker images
 ```
+
+### Eliminar imagen:
 ```shell script
-docker image ls
+docker rmi <image-id> -f
 ```
 
-> Eliminar imagen: 
-> - El flag --force indica que se forzará la eliminación de la imagen
-```shell script
-docker image rm <image-name:tag || image-id> --force
-```
-```shell script
-docker rmi -f <image-name:tag || image-id>
-```
-
-> Eliminar todas las imágenes: 
+### Eliminar todas las imágenes:
 ```shell script
 docker rmi $(docker images -a -q)
 ```

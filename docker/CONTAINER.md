@@ -1,63 +1,69 @@
-## Contenedores
-> Construir nuevo contenedor:
-> - El flag --rm indica que se eliminará el contenedor cuando se detenga
-> - El flag -d indica que se ejecutará el contenedor en segundo plano
->
-> Ejemplo: `$ docker run --rm -p 8093:8093 --name my-container my-image:0.0.1`
+# Contenedores
+- Los contenedores pueden referenciarse a través de su nombre o ID.
+
+### Flags
+Algunos de los flags más recurrentes al ejecutar comandos de contenedores:
+- `--all` es equivalente a `-a` y significa "todos los contenedores (detenidos y en ejecución)"
+- `--force` es equivalente a `-f` y significa "forzar la ejecución"
+- `-q` muestra solamente los ID's
+
+### Construir nuevo contenedor:
+- `--rm` indica que se eliminará el contenedor cuando se detenga
+- `-d` indica que se ejecutará el contenedor en segundo plano
 ```shell script
 docker run --rm -p <local-port>:<internal-port> --name <container-name> --network <network-name> <image-name:tag>
 ```
+> Ejemplo: `$ docker run --rm -p 8093:8093 --name my-container my-image:0.0.1`
 
-> Eliminar contenedor:
+### Mostrar logs:
 ```shell script
-docker rm <container-id || container-name>
+docker logs -f <container-id>
 ```
 
-> Eliminar todos los contenedores detenidos:
-> - El flag `--all` indica la eliminación de imágenes, contenedores, volúmenes y redes que no estén siendo utilizadas 
+### Detener un contenedor previamente iniciado:
 ```shell script
-docker system prune --all
+docker stop <container-id>
 ```
 
-> Iniciar un contenedor previamente detenido:
+### Iniciar un contenedor previamente detenido:
 ```shell script
-docker start <container-id || container-name>
+docker start <container-id>
 ```
 
-> Detener un contenedor previamente iniciado:
+### Eliminar contenedor:
 ```shell script
-docker stop <container-id || container-name>
+docker rm <container-id>
 ```
 
-> Detener todos los contenedores:
+### Detener todos los contenedores:
 ```shell script
 docker stop $(docker ps -a -q)
 ```
 
-> Listar los contenedores activos:
+### Eliminar los contenedores detenidos:
 ```shell script
-docker container ls
-```
-```shell script
-docker ps 
+docker container prune -f -a
 ```
 
-> Listar todos los contenedores (activos y detenidos):
+### Mostrar los contenedores:
 ```shell script
 docker ps -a
 ```
 
-> Ver lista de comandos para contenedores:
+### Mostrar comandos para contenedores:
 ```shell script
 docker container --help
 ```
 
-> Ver logs:
-```shell script
-docker logs -f <container-id || container-name>
-```
-
-> Ver métricas de consumo:
+### Mostrar métricas de consumo:
 ```shell script
 docker stats
+```
+
+### Ingresar al sistema de archivos de un contenedor en ejecución:
+- `it` habilita la opción de "interactivo" y asigna una terminal TTY para la sesión
+- `sh` comando que se ejecutará dentro del contenedor para abrir una sesión de shell
+- `bash` comando que se ejecutará dentro del contenedor para abrir una sesión de bash
+```shell script
+docker exec -it <container-id> sh
 ```

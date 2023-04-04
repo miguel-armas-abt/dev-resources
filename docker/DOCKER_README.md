@@ -7,12 +7,9 @@
 
 > **Registry:** Es donde almacenamos las imágenes de docker para que puedan ser distribuidas
 
-> Versión de Docker: 
+### Eliminar todos los recursos que no estén siendo utilizados:
+Implica la eliminación de imágenes, contenedores, volúmenes y redes
+- `--all` indica todos los recursos, incluyendo los que están actualmente en uso
 ```shell script
-docker --version
-```
-
-> Acceder a un contenedor en modo bash: 
-```shell script
-docker exec -it <container-name> /bin/bash
+docker system prune --all
 ```
