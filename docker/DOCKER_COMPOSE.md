@@ -1,7 +1,7 @@
 # DOCKER COMPOSE
 
 ## Compatibilidad
-Docker Compose requiere ser compatible con el Docker Engine y Docker YML file.
+Docker Compose requiere ser compatible con el Docker Engine y Docker YML file que utilicemos.
 <https://docs.docker.com/compose/compose-file/compose-versioning/>
 
 ## Service
@@ -13,6 +13,16 @@ Un "service" representa un conjunto de configuraciones que definen cómo ejecuta
 Algunos de los flags más recurrentes al ejecutar comandos de Docker Compose:
 - `-f docker-compose-custom.yml` permite ejecutar un archivo .yml diferente a docker-compose.yml
 - `-d` activa la ejecución en segundo plano
+
+### Pull a las imágenes requeridas en la orquestación:
+```shell script
+docker-compose pull
+```
+
+### Construir las imágenes definidas en la orquestación:
+```shell script
+docker-compose build
+```
 
 ### Iniciar los servicios definidos en la orquestación:
 - `--force-recreate` fuerza la recreación de los servicios
@@ -38,16 +48,6 @@ docker-compose down
 ### Detener todos los servicios de la orquestación:
 ```shell script
 docker-compose stop 
-```
-
-### Pull a las imágenes requeridas en la orquestación:
-```shell script
-docker-compose pull
-```
-
-### Construir las imágenes definidas en la orquestación:
-```shell script
-docker-compose build
 ```
 
 ### Obtener versión:

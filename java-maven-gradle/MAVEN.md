@@ -1,19 +1,21 @@
-> Ejecutar proyecto SpringBoot: 
+# Maven
+
+### Ejecutar proyecto SpringBoot: 
 ```shell script
 mvnw spring-boot:run
 ```
 
-> Construir archivo jar: 
+### Compilar
 ```shell script
 mvnw clean package
 ```
 
-> Ejecutar archivo .jar: 
+### Ejecutar archivo .jar: 
 ```shell script
 java -jar target/service-name-0.1.0.jar
 ```
 
-> Ejecutar pruebas unitarias: 
+### Ejecutar pruebas unitarias: 
 ```shell script
 mvnw test
 ```
