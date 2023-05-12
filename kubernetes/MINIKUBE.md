@@ -1,35 +1,51 @@
-Minikube provee una configuración de clúster Only one
+# Minikube
+Minikube provee una configuración de clúster ONLY ONE
 
-> Iniciar el clúster de Kubernetes: 
+### Crear/Iniciar el clúster de Kubernetes: 
+- `--memory=2816 --cpus=4` Indica la cantidad de memoria y cpus que se asigna al cluster
 ```shell script
 minikube start
 ```
 
-> Mostrar el estado del clúster de Kubernete: 
+### Mostrar el estado del clúster: 
 ```shell script
 minikube status
 ```
 
-> Detener el clúster de Kubernetes: 
+### Detener el clúster: 
 ```shell script
 minikube stop
 ```
 
-> Habilitar el dashobard de Kubernetes: 
+### Eliminar el clúster:
+```shell script
+minikube delete
+```
+
+### Habilitar el dashobard de Kubernetes: 
 ```shell script
 minikube dashboard --url
 ```
 
-> Para acceder a un servicio desde fuera del clúster (Por ejemplo, acceder a PgAdmin desde el navegador) utilizaremos la URL generada por Docker Desktop 'minikube service --url <service-name>'
+### Acceder a un servicio desde fuera del cluster:
+Para acceder a un servicio desde fuera del cluster, solicitaremos su URL (dirección IP y puerto) a Minikube
+```shell script
+minikube service --url <service-name>
+```
 
-> Para acceder a un servicio desde dentro del clúster (Por ejemplo, generar una conexión al servicio de PostgreSQL desde PgAdmin, ambos dentro del clúster) utilizaremos la IP 'minikube ip' y el puerto del servicio optenido con 'kubectl get services'
-
-> Mostrar la IP del clúster de Kubernetes: 
+### Acceder a un servicio desde dentro del cluster:
+Para acceder a un servicio desde dentro del clúster utilizaremos la dirección IP del cluster junto con el puerto 
+definido en el servicio (`kubectl get services`)
 ```shell script
 minikube ip
 ```
 
-> Mostrar la URL de un servicio en el clúster de Kubernetes: 
+## Abrir una shell de Minikube
 ```shell script
-minikube service --url <service-name>
+minikube ssh
+```
+
+## Mostrar los perfiles de minikube disponibles
+```shell script
+minikube profile list
 ```

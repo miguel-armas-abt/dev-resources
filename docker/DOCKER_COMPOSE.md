@@ -41,8 +41,9 @@ docker-compose start
 ```
 
 ### Eliminar los servicios definidos en la orquestación:
+- `-v` indica que se eliminarán los volúmenes creados
 ```shell script
-docker-compose down
+docker-compose down -v
 ```
 
 ### Detener todos los servicios de la orquestación:

@@ -17,6 +17,7 @@ Ejemplos:
 - `$ docker run --rm -p 8093:8093 --name my-container my-image:0.0.1`
 
 ### Mostrar logs:
+- `-f` indica que se hará follow en primer plano
 ```shell script
 docker logs -f <container-id>
 ```
@@ -66,5 +67,15 @@ docker stats
 - `sh` comando que se ejecutará dentro del contenedor para abrir una sesión de shell
 - `bash` comando que se ejecutará dentro del contenedor para abrir una sesión de bash
 ```shell script
-docker exec -it <container-id> sh
+docker exec -it <container-id> bash
+```
+
+### Inspeccionar las características del contenedor:
+```shell script
+docker container inspect <container-id>
+```
+
+### Agregar un contenedor a la red de otro:
+```shell script
+docker network connect <container1-id> <container2-id>
 ```
