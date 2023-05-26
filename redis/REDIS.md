@@ -1,24 +1,26 @@
-> Levantar servidor de redis: 
+# REDIS
+
+#### Levantar servidor de redis: 
 ```shell script
 redis-server
 ```
 
-> Levantar cliente de redis: 
+#### Levantar cliente de redis: 
 ```shell script
 redis-cli
 ```
 
-> Mostrar hashes: 
+#### Mostrar hashes: 
 ```shell script
 keys *
 ```
 
-> Borrar cache: 
+#### Borrar cache: 
 ```shell script
 flushall
 ```
 
-> Obtener por llave : 
+#### Obtener por llave : 
 ```shell script
 HGETALL persona:01
 ```
