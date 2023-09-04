@@ -19,3 +19,5 @@ java -jar target/service-name-0.1.0.jar
 ```shell script
 mvnw test
 ```
+### Dependencies
+-Djps.track.ap.dependencies=false
