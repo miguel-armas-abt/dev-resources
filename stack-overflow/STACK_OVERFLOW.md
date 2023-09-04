@@ -1,3 +1,9 @@
+> Manejo de null con RxJava y Optional
+<https://medium.com/my-random-thoughts-in-software-engineering/null-handling-with-rxjava-2-maybe-t-and-some-little-tricky-details-c26b47bd4fc2>
+
+> Métodos genéricos
+<https://stackoverflow.com/questions/15888551/how-to-interpret-public-t-t-readobjectdata-classt-type-in-java>
+
 > ResponseEntity is blocking:
 <https://stackoverflow.com/questions/70868671/how-to-get-object-from-webclient-bodytomono-or-toentity-in-a-non-blocking-way>
 
