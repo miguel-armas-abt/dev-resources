@@ -61,3 +61,8 @@ gitk --all
 ```shell script
 git merge <absorbed-branch>
 ```
+
+#### Abortar el merge con conflictos
+```shell script
+git merge --abort
+```
