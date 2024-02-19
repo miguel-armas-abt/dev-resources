@@ -1,40 +1,45 @@
 # KUBERNETES
 
-### Mostrar nodos:
-```shell script
-kubectl get nodes 
-```
+> **Mostrar nodos**
+> ```shell script 
+> kubectl get nodes 
+> ```
 
-### Mostrar/Cambiar contexto
-```shell script
-kubectl config get-contexts
-kubectl config use-context <context-name>
-```
-> Ejemplo: `kubectl config use-context minikube`
+> **Mostrar/Cambiar contexto**
+> ```shell script 
+> kubectl config get-contexts
+> kubectl config use-context <context-name>
+> ```
+> Ejemplo:
+> `kubectl config use-context minikube`
 
-### Mostrar información del clúster:
-```shell script
-kubectl cluster-info
-```
+> **Mostrar información del clúster**
+> ```shell script 
+> kubectl cluster-info
+> ```
 
-### Mostrar la versión del API Server: 
-```shell script
-kubectl api-versions
-```
+> **Mostrar la versión del API Server**
+> ```shell script 
+> kubectl api-versions
+> ```
 
-### Desplegar los objetos definidos en los manifiestos:
-- `-f` indica el directorio y/o nombre de el/los manifiesto(s)
-```shell script
-kubectl apply -f <directory-name>
-```
-Ejemplos:
-- `kubectl apply -f ./`
-- `kubectl apply -f ./deployment.yml`
+> **Aplicar manifiestos**
+> - `-f` indica el directorio y/o nombre de el/los manifiesto(s)
+> ```shell script 
+> kubectl apply -f <directory-name>
+> ```
+> Ejemplo:
+> - `kubectl apply -f ./`
+> - `kubectl apply -f ./deployment.yml`
 
-### Eliminar los objetos definidos en los manifiestos:
-```shell script
-kubectl delete -f <directory-name>
-```
+> **Eliminar manifiestos**
+> ```shell script 
+> kubectl delete -f <directory-name>
+> ```
+> Ejemplo:
+> - `kubectl delete -f ./`
+> - `kubectl delete -f ./deployment.yml`
+
 
 ### Mostrar todos los objetos
 Muestra pods, deployments y services 
@@ -83,10 +88,11 @@ kubectl delete pod <pod-id>
 kubectl describe pod <pod-id>
 ```
 
-### Ingresar al sistema de archivos del contenedor asociado a un pod:
-```shell script
-kubectl exec -it <pod-id> -- bash
-```
+> **Ingresar al sistema de archivos del contenedor asociado a un pod**
+> - Puede cambiar el flag `bash` por `sh` de acuerdo a la shell instalada en los contenedores.
+> ```shell script 
+> kubectl exec -it <pod-id> -- bash
+> ```
 
 ### Mostrar logs del contenedor asociado a un pod:
 ```shell script
