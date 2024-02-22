@@ -13,7 +13,6 @@ var myDocument = {
 
 ----
 
-▶️ **Consultar por campos**
 ▶️ **Inserciones**
 ```javascript
 use db_university;
