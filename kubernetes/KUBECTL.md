@@ -2,20 +2,26 @@
 
 ## General
 
-> **Mostrar la configuración del clúster (Minikube)**
-> ```shell script 
-> kubectl config view 
-> ```
+▶️ **Mostrar la configuración del clúster (Minikube)**
+```shell script 
+kubectl config view 
+```
 
-> **Mostrar nodos**
-> ```shell script 
-> kubectl get nodes 
-> ```
+----
 
-> **Mostrar información del clúster**
-> ```shell script 
-> kubectl cluster-info
-> ```
+▶️ **Mostrar nodos**
+```shell script 
+kubectl get nodes 
+```
+
+----
+
+▶️ **Mostrar información del clúster**
+```shell script 
+kubectl cluster-info
+```
+
+----
 
 > **Mostrar la versión del API Server**
 > ```shell script 
