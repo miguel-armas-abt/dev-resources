@@ -1,7 +1,6 @@
 ## 3. Actualizaciones
 
-> 1. Recuperar el documento en una variable, modificarlo y volver a guardarlo
-> consultar por expresión regular
+▶️ **Recuperar → Actualizar → Guardar**
 ```javascript
 var currentUser = db.users.findOne({"_id" : ObjectId("5fd8c23a5e34c1f1043c7366")}); 
 
@@ -16,11 +15,11 @@ db.users.update(
 );
 ```
 
-> 2. Modificar directamente el documento con $set o $unset
-> - Modificar una coincidencia
+----
+
+▶️ **Modificar directamente con `$set` o `$unset`**
 ```javascript
 db.users.update(
-	
 	{"_id" : ObjectId("5fd8c23a5e34c1f1043c7364")},
 	{$set: 
 		{
@@ -31,7 +30,9 @@ db.users.update(
 );
 ```
 
-> - Modificar múltiples coincidencias
+----
+
+▶️ **Modificar múltiples coincidencias**
 ```javascript
 db.users.update(
 	{university: "UNMSM"},
@@ -46,7 +47,9 @@ db.users.update(
 );
 ```
 
-> - Eliminar un campo para múltiples coincidencias
+----
+
+▶️ **Eliminar un campo para múltiples coincidencias**
 ```javascript
 db.usuarios.update(
 	{university: "UNMSM"},
@@ -54,3 +57,5 @@ db.usuarios.update(
 	{multi: true}
 );
 ```
+
+----

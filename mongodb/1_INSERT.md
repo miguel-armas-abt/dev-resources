@@ -1,4 +1,4 @@
-> Algunos de los tipos de datos que tiene MongoDB:
+📋 **Tipos de dato en MongoDB**:
 ```javascript
 var myDocument = {
 	stringValue = "Cadena",
@@ -11,7 +11,10 @@ var myDocument = {
 };
 ```
 
-## 1. Inserciones
+----
+
+▶️ **Consultar por campos**
+▶️ **Inserciones**
 ```javascript
 use db_university;
 show collections;

@@ -1,32 +1,36 @@
 ## 2. Consultas
-> consultar por _id
+
+▶️ **Consultar por _id**
 ```javascript
 var user = db.users.findOne(
 	{"_id" : ObjectId("5fd8c1df5e34c1f1043c7363")}
 );
 ```
 
-> consultar por nombre
-```javascript
-db.users.find({name: "Miguel Armas"});
-```
+----
 
-> consultar por nombre y edad
+▶️ **Consultar por campos**
 ```javascript
 db.users.find({name: "Miguel Armas", age: 21});
 ```
 
-> consultar diferente de
+----
+
+▶️ **Consultar diferente de**
 ```javascript
 db.users.find({age: {$ne: 21}});
 ```
 
-> consultar ocultando campo name y _id
+----
+
+▶️ **Consultar ocultando campos**
 ```javascript
 db.users.find({}, {name:1, _id:0});
 ```
 
-> consultar elementos entre
+----
+
+▶️ **Consultar elementos entre**
 ```javascript
 db.users.find(
 	{age:
@@ -36,9 +40,13 @@ db.users.find(
 ).pretty();
 ```
 
-> consultar por expresión regular
+----
+
+▶️ **Consultar por expresión regular**
 ```javascript
 db.users.find({name: /ro/});
 db.users.find({name: /^ro/});
 db.users.find({name: /ro$/});
 ```
+
+----

@@ -1,51 +1,52 @@
-# Minikube
+# MINIKUBE
 Minikube provee una configuración de clúster ONLY ONE
 
-### Crear/Iniciar el clúster de Kubernetes: 
-- `--memory=2816 --cpus=4` Indica la cantidad de memoria y cpus que se asigna al cluster
-```shell script
-minikube start
-```
+----
 
-### Mostrar el estado del clúster: 
-```shell script
+▶️ **Iniciar / Mostrar estado / Detener / Eliminar el clúster de Kubernetes**
+```shell script 
+minikube start --memory=2816 --cpus=4
 minikube status
-```
-
-### Detener el clúster: 
-```shell script
 minikube stop
-```
-
-### Eliminar el clúster:
-```shell script
 minikube delete
 ```
 
-### Habilitar el dashobard de Kubernetes: 
-```shell script
+----
+
+📈 **Habilitar el dashobard de Kubernetes**
+```shell script 
 minikube dashboard --url
 ```
 
-### Acceder a un servicio desde fuera del cluster:
-Para acceder a un servicio desde fuera del cluster, solicitaremos su URL (dirección IP y puerto) a Minikube
-```shell script
+----
+
+🔀 **Port forwarding de un servicio**
+<br>Permite acceder desde nuestro entorno local a los servicios disponibles en el clúster k8s de Minikube
+```shell script 
 minikube service --url <service-name>
 ```
 
-### Acceder a un servicio desde dentro del cluster:
-Para acceder a un servicio desde dentro del clúster utilizaremos la dirección IP del cluster junto con el puerto 
-definido en el servicio (`kubectl get services`)
-```shell script
+----
+
+🔀 **Apuntar a un servicio dentro del clúster**
+<br>Para acceder a un servicio desde dentro del clúster podemos utilizar la dirección IP del cluster de Minikube junto 
+con el puerto de escucha definido para el servicio (`kubectl get services`)
+```shell script 
 minikube ip
 ```
 
-## Abrir una shell de Minikube
+----
+
+▶️ **Abrir shell de Minikube**
 ```shell script
 minikube ssh
 ```
 
-## Mostrar los perfiles de minikube disponibles
+----
+
+▶️ **Mostrar los perfiles de minikube disponibles**
 ```shell script
 minikube profile list
 ```
+
+----
