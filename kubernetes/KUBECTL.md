@@ -148,5 +148,10 @@ kubectl rollout status deployment/<deployment-id>
 kubectl rollout restart deployment/<deployment-id>
 ```
 
+----
 
-
+▶️ **Port forwarding**
+```shell script 
+kubectl port-forward <pod-id> <local-port>:8080
+kubectl port-forward svc/<pod-id> <local-port>:8080
+```
