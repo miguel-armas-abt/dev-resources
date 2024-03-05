@@ -4,7 +4,7 @@
 - [2. Crear producto](#2-crear-producto)
 - [3. Configurar políticas](#3-configurar-politicas)
 - [4. Generar suscripción por producto](#4-generar-suscripcion-por-producto)
-- [5. Validar creacion de la API](#4-validar-creacion-de-la-api)
+- [5. Validar creacion de la API](#5-validar-creacion-de-la-api)
 
 Ingresar al recurso del API Management.
 ![Texto alternativo](./images/01_select-apm-resource.jpg)
