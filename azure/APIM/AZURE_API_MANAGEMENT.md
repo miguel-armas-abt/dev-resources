@@ -1,5 +1,11 @@
 # CONFIGURAR API EN EL APIM
 
+- [1. Crear variables](#1-crear-variables)
+- [2. Crear producto](#2-crear-producto)
+- [3. Configurar políticas](#3-configurar-politicas)
+- [4. Generar suscripción por producto](#4-generar-suscripcion-por-producto)
+- [5. Validar creacion de la API](#4-validar-creacion-de-la-api)
+
 Ingresar al recurso del API Management.
 ![Texto alternativo](./images/01_select-apm-resource.jpg)
 
@@ -33,7 +39,7 @@ Ingresar al recurso del API Management.
    6. Dar clic en el botón `Crear`
    ![Texto alternativo](./images/05_add-product.jpg)
 
-## 3. Configurar políticas
+## 3. Configurar politicas
 1. Ubicarse en el menú izquierdo, sección `APIs`.
    1. Seleccionar `Productos`.
    2. Buscar el producto creado en el `paso 2` y seleccionarlo.
@@ -46,7 +52,7 @@ Ingresar al recurso del API Management.
    3. Dar clic en el botón `Save`.
    ![Texto alternativo](./images/08_directives-editor.jpg)
 
-## 4. Generar suscripción por producto
+## 4. Generar suscripcion por producto
 1. Ubicarse en el menú izquierdo, sección `APIs`.
    1. Seleccionar `Productos`.
    2. Buscar el producto creado en el `paso 2` y seleccionarlo.
@@ -83,7 +89,7 @@ Ingresar al recurso del API Management.
    ![Texto alternativo](./images/15_header-name.jpg)
    10. Dar clic en `Save`.
 
-## 5. Validar creación de la API
+## 5. Validar creacion de la API
 1. Ubicarse en el menú izquierdo, sección `APIs`.
    1. Seleccionar `API`.
    2. Buscar la API creada en el `paso 4`.
