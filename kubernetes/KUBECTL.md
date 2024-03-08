@@ -53,6 +53,7 @@ Ejemplos:<br>
 ▶️ **Mostrar todos los objetos**
 ```shell script 
 kubectl get all
+kubectl get pods --all-namespaces
 ```
 
 ----
