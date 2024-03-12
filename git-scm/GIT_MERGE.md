@@ -24,3 +24,10 @@ git merge --abort
 ```
 
 ----
+
+▶️ **Finalizar merge manual**
+```shell script
+git merge --continue -m "<commit-message>"
+```
+
+----
