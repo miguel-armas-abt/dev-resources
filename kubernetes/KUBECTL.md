@@ -53,6 +53,7 @@ Ejemplos:<br>
 ▶️ **Mostrar todos los objetos**
 ```shell script 
 kubectl get all
+kubectl get pods --all-namespaces
 ```
 
 ----
@@ -154,4 +155,10 @@ kubectl rollout restart deployment/<deployment-id>
 ```shell script 
 kubectl port-forward <pod-id> <local-port>:8080
 kubectl port-forward svc/<pod-id> <local-port>:8080
+```
+
+▶️ **Crear / Eliminar namespace**
+```shell script
+kubectl create namespace <namespace>
+kubectl delete namespace <namespace>
 ```
