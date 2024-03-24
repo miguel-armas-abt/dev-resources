@@ -73,7 +73,7 @@ docker exec -it <container-id> bash
 
 ### Inspeccionar las características del contenedor:
 ```shell script
-docker container inspect <container-id>
+docker inspect <container-id>
 ```
 
 ### Agregar un contenedor a la red de otro:
