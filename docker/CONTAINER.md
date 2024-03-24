@@ -50,6 +50,7 @@ docker container prune -f -a
 ### Mostrar los contenedores:
 ```shell script
 docker ps -a
+docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Status}}"
 ```
 
 ### Mostrar comandos para contenedores:
