@@ -10,15 +10,28 @@
  mysqld --initialize
  mysqld --install "mysql80"
  ```
+
  Inciar el servidor:
  ```
  net start mysql80
  ```
+
+Inciar sesión con el password por defecto:
+ ```
+ mysql -u root
+ ```
+
  Cambiar de password:
  ```
  ALTER USER 'root'@'localhost' IDENTIFIED BY 'qwerty';
  ```
- Inciar sesión:
+
+Detener el servidor:
+ ```
+ net stop mysql80
+ ```
+
+ Inciar sesión con el password creado:
  ```
  mysql -u root -p"qwerty"
  ```
