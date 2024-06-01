@@ -50,3 +50,24 @@ minikube profile list
 ```
 
 ----
+
+▶️ **Iniciar el cluster de Minikube**
+- Para especificar los recursos asignados a Minukube, puede indicar `--memory=2816 --cpus=4`.
+- Utilice el contexto default de Docker.
+```shell script
+ docker context use default
+ minikube start
+```
+
+----
+
+▶️ **Acceder al Docker de Minikube**
+- Windows:
+```shell script 
+ Invoke-Expression ((minikube docker-env) -join "`n")
+```
+
+- Unix:
+```shell script 
+ eval $(minikube docker-env --shell bash)
+```
