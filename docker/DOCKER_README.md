@@ -13,3 +13,12 @@ Implica la eliminación de imágenes, contenedores, volúmenes y redes
 ```shell script
 docker system prune --all
 ```
+
+### Configurar Docker Desktop
+> Para especificar los recursos asignados a Docker Desktop, cree un archivo `.wslconfig` en la ruta
+> `C:\Users\<username>\`, agregue el siguiente contenido en dependencia de los recursos de su entorno y reinicie Docker Desktop.
+> ```javascript
+> [wsl2]
+> memory=3072MB
+> processors=5
+> ```
