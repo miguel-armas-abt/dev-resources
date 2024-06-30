@@ -36,6 +36,7 @@ public class Properties {
 public class RestTemplateConfig {
 
   @Produces
+  @Default
   public RestTemplate restTemplate(Properties properties) {
     return new RestTemplate(properties);
   }
@@ -62,10 +63,10 @@ public class CreditCardService {
 ## Inyección automática
 Jakarta EE utiliza anotaciones para inyectar beans automáticamente.
 
-| Anotación | Descripción                                                                                                            |  
-|-----------|------------------------------------------------------------------------------------------------------------------------|
-| `@Inject` | Indica que una dependencia debe ser inyectada automáticamente por el CDI.                                              |
-| `@Named`  | Utilizada junto con @Inject para especificar cuál bean debe ser inyectado cuando hay múltiples candidatos disponibles. |
+| Anotación | Descripción                                                                                                                        |  
+|-----------|------------------------------------------------------------------------------------------------------------------------------------|
+| `@Inject` | Indica que una dependencia debe ser inyectada automáticamente por el CDI.                                                          |
+| `@Named`  | Calificador utilizado junto con @Inject para especificar cuál bean debe ser inyectado cuando hay múltiples candidatos disponibles. |
 
 ```java
 @Singleton
