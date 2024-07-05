@@ -153,8 +153,8 @@ kubectl rollout restart deployment/<deployment-id>
 
 ▶️ **Port forwarding**
 ```shell script 
-kubectl port-forward <pod-id> <local-port>:8080
-kubectl port-forward svc/<pod-id> <local-port>:8080
+kubectl port-forward <pod-id> <local-port>:8080 -n <namespace>
+kubectl port-forward svc/<service-name> <local-port>:8080 -n <namespace>
 ```
 
 ▶️ **Crear / Eliminar namespace**
