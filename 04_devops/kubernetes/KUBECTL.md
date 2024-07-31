@@ -58,7 +58,7 @@ kubectl get pods --all-namespaces
 
 ----
 
-▶️ **Mostrar / eliminar / describir objetos**
+▶️ **Mostrar / eliminar / describir objeto y eventos**
 - **get**
   - Utilice `--all-namespaces` para mostrar los objetos de todos los namespaces
   - Utilice `-o yaml` para formatear la respuesta 
