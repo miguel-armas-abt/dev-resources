@@ -1,8 +1,9 @@
 # REGEX
 
-> 📌 **Notas**
-> - Una expresión regular (regex) es una notación que permite definir un patrón de formación de cadenas.
-> - Con ayuda de la regex podemos verificar si una cadena candidata pertenece o no a este patrón.
+https://regexr.com/
+
+> - Una expresión regular (REGEX) es una secuencia de caracteres que forma un patrón de búsqueda.
+> - Con ayuda de las REGEX podemos verificar si una cadena de texto cumple con un patrón específico.
 
 | Operador           | Descripción                                                                                | 
 |--------------------|--------------------------------------------------------------------------------------------|
@@ -28,3 +29,14 @@
 | `(?:expr)`         | Agrupa una expresión sin que se capture                                                    |
 | `(?=expr)`         | Seguido por la expresión                                                                   |
 | `(?!expr)`         | No seguido por la expresión                                                                |
+
+### 🔍 Ejemplos
+
+| Descripción                                 | Ejemplo                                       | REGEX                                                 |
+|---------------------------------------------|-----------------------------------------------|-------------------------------------------------------|
+| Número de teléfono celular                  | `938817321`                                   | `^9\d{8}$`                                            |
+| Número de documento de identidad (DNI Perú) | `76527360`                                    | `^\d{8}$`                                             |
+| Solo letras                                 | `HolaMundo`                                   | `^[a-zA-Z]+$`                                         |
+| Solo dígitos                                | `123456`                                      | `^\d+$`                                               |
+| Dirección de correo electrónico             | `email.user@email.com`, `email_user@email.es` | `^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,6}$`            |
+| Fecha en formato día/mes/año                | `14/02/2024`                                  | `^(0[1-9]\|[12][0-9]\|3[01])/(0[1-9]\|1[0-2])/\d{4}$` |
