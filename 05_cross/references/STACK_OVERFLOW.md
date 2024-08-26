@@ -36,3 +36,6 @@ https://www.youtube.com/watch?v=vBMryTczFMI
 
 >GNU32 for Windows. Add path to environment variables /bin
 https://gnuwin32.sourceforge.net/install.html
+
+> host.docker.internal (C:\Windows\System32\drivers\etc\hosts.file)
+<https://stackoverflow.com/questions/57319678/spring-boot-cloud-eurka-windows-10-eurkea-returns-host-docker-internal-for-clien>
